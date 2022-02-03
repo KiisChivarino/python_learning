@@ -1,6 +1,4 @@
 my_first_list = [2, 'text', 456, 45.3, None, 'new_el', True]
-# for el in myFirstList:
-#     print(type(el))
 my_second_list = [['sublist']]
 my_second_list.insert(0, ('cortege', 'into', 'list'))
 my_second_list.insert(1, {'set'})
