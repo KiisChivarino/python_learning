@@ -10,7 +10,7 @@ while True:
     user_month = int(user_value)
     break
 
-for season, month in seasons.items():
-    if user_month in month:
+for season, monthList in seasons.items():
+    if user_month in monthList:
         print(f'Время года - {season}')
         break
