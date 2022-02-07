@@ -1,17 +1,17 @@
-myList = list()
-firstValue = None
+my_list = list()
+first_value = None
 while True:
-    firstValue = input('Введите значение списка: ')
+    first_value = input('Введите значение списка: ')
     ask = input('Продолжить ввод значений? (Y,n)')
     if (ask == 'y') | (ask == 'Y') | (ask == ''):
-        myList.append(input('Введите значение списка: '))
-        myList.append(firstValue)
+        my_list.append(input('Введите значение списка: '))
+        my_list.append(first_value)
     else:
-        myList.append(firstValue)
+        my_list.append(first_value)
         break
     ask = input('Продолжить ввод значений? (Y,n)')
     if (ask == 'y') | (ask == 'Y') | (ask == ''):
         continue
     else:
         break
-print('\n', myList)
+print('\n', my_list)
