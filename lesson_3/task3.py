@@ -1,15 +1,10 @@
-def negative_power(base, degree):
-    base = float(base)
-    degree = int(degree)
-    if degree > -1:
+def sum_biggest(fistNumber, secondNumber, thirdNumber):
+    try:
+        number_list = [float(fistNumber), float(secondNumber), float(thirdNumber)]
+    except ValueError:
         return False
-    result = base
-    for i in range(1, degree):
-        result = base * base
-    return 1 / result
+    number_list.remove(min(number_list))
+    return sum(number_list)
 
 
-print(negative_power(
-    input('Введите основание\n'),
-    input('Введите отрицательную степень\n')
-))
+print(sum_biggest(1, 2, 3))
