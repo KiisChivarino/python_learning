@@ -1,5 +1,18 @@
-def words_title(string_of_words):
-    return ' '.join(map(str.title, list(filter(None, string_of_words.split(' ')))))
+import re
 
 
-print(words_title('слово1 слово2 слово3'))
+def sum_a_string_of_numbers(string_of_numbers, separator=' '):
+    return sum(list(map(int, list(filter(None, string_of_numbers.split(separator))))))
+
+sum_of_numbers = int()
+print('Добавляйте числа через пробел; для завершения добавьте точку')
+while True:
+    string_of_numbers = input()
+    if re.search('[^0-9 .]', string_of_numbers):
+        print('Необходимо вводить только числа через пробел или точку!')
+        continue
+    if '.' in string_of_numbers:
+        sum_of_numbers += sum_a_string_of_numbers(string_of_numbers.split('.')[0])
+        break
+    sum_of_numbers += sum_a_string_of_numbers(string_of_numbers)
+print(sum_of_numbers)
